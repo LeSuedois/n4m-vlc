@@ -80,6 +80,12 @@ fullscreen: () => {
 	}
 },
 
+fullscreen: (val) => {
+	if(isconnected()) {
+		vlc.setFullscreen(val)
+	}
+},
+
 clear: () => {
 	if(isconnected()) {
 		vlc.emptyPlaylist().then(() => {
